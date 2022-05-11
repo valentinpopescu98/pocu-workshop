@@ -1,4 +1,4 @@
-package demos;
+package utils;
 
 public class IntegerWrapper {
     int id;

@@ -1,23 +1,23 @@
-package demos.ex8;
+package ex9_matchers;
 
-import demos.IntegerWrapper;
+import utils.IntegerWrapper;
 
 import java.util.List;
 
-import static demos.Utils.makeList;
+import static utils.ListMaker.makeList;
 
 public class Demo {
     public static void main(String[] args) {
         List<IntegerWrapper> lst = makeList();
 
         boolean anyBiggerThanFive = lst.stream()
-                .anyMatch(x -> x.getValue() > 5);
+                                       .anyMatch(x -> x.getValue() > 5);
 
         boolean allBiggerThanFive = lst.stream()
-                .allMatch(x -> x.getValue() > 5);
+                                       .allMatch(x -> x.getValue() > 5);
 
         boolean noneBiggerThanFive = lst.stream()
-                .noneMatch(x -> x.getValue() > 5);
+                                       .noneMatch(x -> x.getValue() > 5);
 
         System.out.println(anyBiggerThanFive);
         System.out.println(allBiggerThanFive);

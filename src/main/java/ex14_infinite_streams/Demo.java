@@ -1,4 +1,4 @@
-package demos.ex14;
+package ex14_infinite_streams;
 
 import java.util.Random;
 import java.util.function.Supplier;
@@ -11,9 +11,11 @@ public class Demo {
         Stream<Integer> numbers1 = Stream.iterate(0, x -> x + 1);
         Stream<Integer> numbers2 = Stream.generate(supplier);
 
-        numbers1.limit(10000)
+        numbers1.limit(10)
                 .forEach(System.out::println);
-        numbers2.limit(10000)
+
+        System.out.println();
+        numbers2.limit(15)
                 .forEach(System.out::println);
     }
 }

@@ -1,10 +1,10 @@
-package demos.ex5;
+package ex7_collect;
 
-import demos.IntegerWrapper;
+import utils.IntegerWrapper;
 
 import java.util.List;
 
-import static demos.Utils.makeList;
+import static utils.ListMaker.makeList;
 import static java.util.stream.Collectors.toList;
 
 public class Demo {
@@ -12,8 +12,8 @@ public class Demo {
         List<IntegerWrapper> lst = makeList();
 
         List<Integer> newLst = lst.stream()
-                .map(x -> x.getValue() * 3)
-                .collect(toList());
+                                  .map(x -> x.getValue() * 2)
+                                  .collect(toList());
 
         newLst.forEach(System.out::println);
     }

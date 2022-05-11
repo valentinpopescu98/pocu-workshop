@@ -1,4 +1,4 @@
-package ex3;
+package ex2_generic_return;
 
 public class DemoWithClass {
     public static void main(String[] args) {
